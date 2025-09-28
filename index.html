@@ -1,115 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Bank: Exchange Skills, Not Money</title>
-    <link rel="stylesheet" href="style.css">
+    <title>TimeBank Community - Exchange Skills</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <h1>Time Bank</h1>
-            <p>A World Where Time is Currency &middot; Exchange Skills, Not Money</p>
+        <div class="logo">
+            <span class="logo-icon">⇌</span> TimeBank
         </div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#how-it-works">How It Works</a>
+            <button id="theme-toggle">Toggle Dark Mode</button>
+            <button class="btn btn-login" onclick="showSection('login-section')">Login</button>
+            <button class="btn btn-primary" onclick="showSection('signup-section')">Sign Up</button>
+        </nav>
     </header>
 
-    <section id="solution">
-        <div class="container">
-            <h2>Our Solution: Skills for All</h2>
-            <p class="center-text large-text">The Time Bank platform allows people to exchange skills and services, building trust, inclusivity, and strong communities.</p>
-            <p class="center-text x-large-text green-text bold-text">
-                1 Hour of Service = 1 Credit (Equal for All)
-            </p>
-        </div>
-    </section>
-
-    <section id="problem" class="grey-bg">
-        <div class="container">
-            <h2>The Challenge We Address</h2>
-            <div class="grid-4">
-                <div class="card">
-                    <h3>Rising Unemployment</h3>
-                    <p>Many people lack work opportunities.</p>
-                </div>
-                <div class="card">
-                    <h3>Untapped Skills Wasted</h3>
-                    <p>Valuable talents remain unused.</p>
-                </div>
-                <div class="card">
-                    <h3>Financial Exclusion</h3>
-                    <p>Limited access to resources.</p>
-                </div>
-                <div class="card">
-                    <h3>Social Isolation</h3>
-                    <p>Lack of community ties.</p>
-                </div>
+    <main>
+        <section id="hero-section" class="active">
+            <div class="hero-content">
+                <h1>Exchange Skills, Not Dollars.</h1>
+                <p>Join the professional community where your time is the currency. Offer your expertise and find the skills you need—all for free.</p>
+                <button class="btn btn-primary btn-large" onclick="showSection('signup-section')">Get Started Today</button>
             </div>
-        </div>
-    </section>
-
-    <section id="how-it-works">
-        <div class="container">
-            <h2>How It Works (The User Journey)</h2>
-            <div class="grid-4 steps">
-                <div class="step-card">
-                    <h3>1. Sign Up</h3>
-                    <p>Join the Community on our Mobile-first app.</p>
-                </div>
-                <div class="step-card">
-                    <h3>2. List Skills</h3>
-                    <p>Offer the skills you have & list the skills you need.</p>
-                </div>
-                <div class="step-card">
-                    <h3>3. Get Matched</h3>
-                    <p>AI-based skill matching connects you instantly.</p>
-                </div>
-                <div class="step-card">
-                    <h3>4. Earn Credits</h3>
-                    <p>Complete a service, earn credits, and use them later.</p>
-                </div>
+            <div class="hero-image">
+                <img src="placeholder-hero.svg" alt="Skill Exchange Graphic">
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="impact" class="grey-bg">
-        <div class="container">
-            <h2>Innovation & Impact Metrics</h2>
-            <p class="center-text">Our platform guarantees **equality of every skill** and **removes money barriers**.</p>
-            
-            <div class="metrics-grid">
-                <div class="metric">
-                    <div class="metric-value">40%</div>
-                    <p>Reduction in income inequality</p>
+        <section id="signup-section" class="hidden">
+            <h2>Create Your Professional Profile</h2>
+            <div class="form-container">
+                <form id="signup-form">
+                    <h3>1. Account Details</h3>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="text" placeholder="Username (iganga360)" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Mobile Number (Optional)">
+                    <input type="password" placeholder="Password" required>
+                    
+                    <h3>2. Your Exchange Profile</h3>
+                    <textarea placeholder="Skills I Offer (e.g., Web Design, Spanish, Guitar Lessons)" required></textarea>
+                    <textarea placeholder="Skills I Need (e.g., Photography, Marketing, Financial Advice)" required></textarea>
+                    <textarea placeholder="Exchange Goals/Other Requirements..." rows="3"></textarea>
+
+                    <button type="button" class="btn btn-primary" onclick="showSection('match-section')">Create Profile & Find Matches (MOCK)</button>
+                    <p class="switch-link">Already have an account? <a href="#" onclick="showSection('login-section')">Login</a></p>
+                </form>
+            </div>
+        </section>
+
+        <section id="login-section" class="hidden">
+            <h2>Welcome Back to TimeBank</h2>
+            <div class="form-container">
+                <form>
+                    <input type="text" placeholder="Username or Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="btn btn-primary">Login (MOCK)</button>
+                    <p class="switch-link">Don't have an account? <a href="#" onclick="showSection('signup-section')">Sign Up</a></p>
+                </form>
+            </div>
+        </section>
+
+        <section id="match-section" class="hidden">
+            <h2>Your Potential Skill Matches</h2>
+            <p>Based on your profile, here are community members with matching exchange needs and offers.</p>
+
+            <div class="match-card">
+                <img src="placeholder-user.svg" alt="User Profile">
+                <div class="match-info">
+                    <h3>Alex Johnson</h3>
+                    <p><strong>Offers:</strong> Photography, Social Media Marketing</p>
+                    <p><strong>Needs:</strong> Web Design (Your Skill!)</p>
                 </div>
-                <div class="metric">
-                    <div class="metric-value">85%</div>
-                    <p>Skill utilization rate</p>
-                </div>
-                <div class="metric">
-                    <div class="metric-value">3x</div>
-                    <p>Stronger community connections</p>
-                </div>
+                <button class="btn btn-primary">Connect & Exchange (MOCK)</button>
             </div>
 
-            <div class="vision">
-                <h3>Future Technology & Vision</h3>
-                <p>The app will use **AI-based skill matching** and **Blockchain-secured credits**. Our vision is to be **Equitable, Inclusive, and Resilient.**</p>
+            <div class="match-card">
+                <img src="placeholder-user.svg" alt="User Profile">
+                <div class="match-info">
+                    <h3>Maria Lopez</h3>
+                    <p><strong>Offers:</strong> Financial Advice, Excel Training</p>
+                    <p><strong>Needs:</strong> Guitar Lessons (Your Skill!)</p>
+                </div>
+                <button class="btn btn-primary">Connect & Exchange (MOCK)</button>
             </div>
-        </div>
-    </section>
+            <button class="btn btn-secondary" onclick="showSection('hero-section')">Back to Home</button>
+        </section>
+        
+    </main>
 
-    <section class="cta">
-        <div class="container">
-            <h2>Call to Action</h2>
-            <p>Imagine a world where every hour has equal worth. Share your time, grow your community.</p>
-            <a href="[PASTE YOUR FIGMA PROTOTYPE LINK HERE]" target="_blank" class="cta-button">
-                View Live Prototype Demo &rarr;
+    <footer>
+        <p>&copy; 2024 TimeBank Community. All rights reserved.</p>
+        <div class="creator-profile" id="creator-profile">
+            <a href="https://instagram.com/iganga360" target="_blank" class="instagram-link">
+                Creator: @iganga360
             </a>
-            <p class="small-text">**Next Step:** Launch local pilot → Scale across communities.</p>
         </div>
-    </section>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

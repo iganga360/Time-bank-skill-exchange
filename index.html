@@ -1,147 +1,195 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillSwap Community - TimeBank</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Time Bank • Skill Exchange</title>
+  <meta name="description" content="Time Bank — Exchange Skills, Not Money. A community skill exchange platform (MVP)." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-    <header>
-        <div class="logo">
-            <span class="logo-icon">⇌</span> SkillSwap
+  <div id="app" class="light">
+    <header class="site-header">
+      <div class="brand">
+        <!-- SVG Logo -->
+        <div class="logo" aria-hidden="true">
+          <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" role="img">
+            <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ff8a65"/><stop offset="1" stop-color="#7c4dff"/></linearGradient></defs>
+            <rect rx="8" width="120" height="40" fill="url(#g)"/>
+            <text x="16" y="26" font-family="Segoe UI, Roboto, Arial" font-size="14" fill="#fff">Time</text>
+            <text x="58" y="26" font-family="Segoe UI, Roboto, Arial" font-size="14" fill="#fff">Bank</text>
+            <circle cx="12" cy="20" r="5" fill="#fff" opacity="0.12"/>
+          </svg>
         </div>
-        <nav>
-            <a href="#" onclick="showSection('hero-section')">Home</a>
-            <a href="#" onclick="showSection('how-it-works-section')">How It Works</a>
-            <button id="theme-toggle">Toggle Dark Mode</button>
-            <button class="btn btn-login" onclick="showSection('login-section')">Login</button>
-            <button class="btn btn-primary" onclick="showSection('signup-section')">Sign Up</button>
-        </nav>
+        <div class="brand-text">
+          <h1>Time Bank</h1>
+          <p class="tag">Exchange Skills — 1 hour = 1 Time Credit</p>
+        </div>
+      </div>
+
+      <nav class="header-controls">
+        <button id="themeToggle" class="btn ghost" title="Toggle dark / light">🌗</button>
+        <button id="btnLogin" class="btn primary">Login / Signup</button>
+      </nav>
     </header>
 
     <main>
-        <section id="hero-section" class="active">
-            <div class="hero-content">
-                <h1 id="ambience-greeting">Exchange Skills, Not Dollars.</h1>
-                <p>Join the professional community where your time is the currency. Offer your expertise and find the skills you need—all for free.</p>
-                <button class="btn btn-primary btn-large" onclick="showSection('signup-section')">Get Started Today</button>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-content">
+          <h2>Exchange Skills, Not Money</h2>
+          <p class="lead">A community skill-exchange platform where 1 hour = 1 credit. Learn, teach, and build stronger neighbourhoods.</p>
+          <div class="hero-ctas">
+            <button id="ctaSignup" class="btn cta">Create Profile</button>
+            <button id="ctaExplore" class="btn ghost">Explore Members</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <!-- stylized cards -->
+          <div class="cards">
+            <div class="card card-1">
+              <h3>Teach Guitar 🎸</h3>
+              <p>30 mins lesson — 0 cost</p>
             </div>
-            <div class="hero-image">
-                <img src="placeholder-hero.svg" alt="Skill Exchange Graphic">
+            <div class="card card-2">
+              <h3>Learn Excel 📊</h3>
+              <p>1 hour hands-on</p>
             </div>
-        </section>
-
-        <section id="how-it-works-section" class="hidden">
-            <h2>How SkillSwap Works</h2>
-            <div class="step-guide">
-                <div class="step">
-                    <h3>1. Create Profile</h3>
-                    <p>List the **Skills I Offer** (e.g., Photography) and the **Skills I Need** (e.g., Web Design).</p>
-                </div>
-                <div class="step">
-                    <h3>2. Match & Connect</h3>
-                    <p>Our system finds users whose needs match your offers, and vice versa. Initiate a connection!</p>
-                </div>
-                <div class="step">
-                    <h3>3. Exchange Time</h3>
-                    <p>Interact, teach, and learn! Your time is logged, ensuring a fair, reciprocal exchange of knowledge.</p>
-                </div>
+            <div class="card card-3">
+              <h3>Repair Bike 🔧</h3>
+              <p>Community workshop</p>
             </div>
-            <button class="btn btn-secondary" onclick="showSection('signup-section')">I'm Ready to Join!</button>
-        </section>
+          </div>
+        </div>
+      </section>
 
+      <!-- Features -->
+      <section class="features">
+        <h3>Why Time Bank?</h3>
+        <div class="feature-grid">
+          <div class="feature">
+            <h4>Inclusivity</h4>
+            <p>Remove financial barriers — exchange skills and time.</p>
+          </div>
+          <div class="feature">
+            <h4>Equal Value</h4>
+            <p>1 hour of any service = 1 Time Credit — fair and transparent.</p>
+          </div>
+          <div class="feature">
+            <h4>Community</h4>
+            <p>Strengthen local relationships and reduce isolation.</p>
+          </div>
+          <div class="feature">
+            <h4>Skill Utilization</h4>
+            <p>Tap into skills that are otherwise unused.</p>
+          </div>
+        </div>
+      </section>
 
-        <section id="signup-section" class="hidden">
-            <h2>Create Your Professional Profile</h2>
-            <div class="form-container">
-                <form id="signup-form">
-                    <h3>1. Account Details</h3>
-                    <input type="text" id="signup-name" placeholder="Full Name" required>
-                    <input type="text" id="signup-username" placeholder="Username (iganga360)" required>
-                    <input type="email" id="signup-email" placeholder="Email" required>
-                    <input type="password" id="signup-password" placeholder="Password (MINIMUM 6 characters)" required>
-                    
-                    <h3>2. Your Exchange Profile</h3>
-                    <textarea id="skills-offer" placeholder="Skills I Offer (e.g., Web Design, Spanish, Guitar Lessons)" required></textarea>
-                    <textarea id="skills-need" placeholder="Skills I Need (e.g., Photography, Marketing, Financial Advice)" required></textarea>
-                    
-                    <button type="submit" class="btn btn-primary">Create Profile & Find Matches (MOCK)</button>
-                    <p class="switch-link">Already have an account? <a href="#" onclick="showSection('login-section')">Login</a></p>
-                </form>
-            </div>
-        </section>
+      <!-- Members / Explore -->
+      <section class="members" id="membersSection">
+        <div class="section-head">
+          <h3>Explore Members</h3>
+          <p class="muted">Find people who can teach what you want to learn — and who want to learn what you know.</p>
+        </div>
 
-        <section id="login-section" class="hidden">
-            <h2>Welcome Back to SkillSwap</h2>
-            <div class="form-container">
-                <form id="login-form">
-                    <input type="text" id="login-username" placeholder="Username" required>
-                    <input type="password" id="login-password" placeholder="Password" required>
-                    <button type="submit" class="btn btn-primary">Login (MOCK)</button>
-                    <p class="switch-link">Don't have an account? <a href="#" onclick="showSection('signup-section')">Sign Up</a></p>
-                    <p id="login-error" class="error-message"></p>
-                </form>
-            </div>
-        </section>
+        <div id="memberControls" class="member-controls">
+          <input id="searchSkill" placeholder="Search skill (e.g., 'guitar')" />
+          <select id="filterMode">
+            <option value="all">All Members</option>
+            <option value="mutual">Mutual Matches</option>
+          </select>
+          <button id="btnRefresh" class="btn">Refresh</button>
+        </div>
 
-        <section id="match-section" class="hidden">
-            <h2>Your Potential Skill Matches</h2>
-            <p>Our AI (Aura) has found these matches. Initiate an exchange to start interacting!</p>
+        <div id="memberList" class="member-list"></div>
+      </section>
 
-            <div class="match-card" data-user="alex">
-                <img src="placeholder-user.svg" alt="User Profile">
-                <div class="match-info">
-                    <h3>Alex Johnson</h3>
-                    <p><strong>Offers:</strong> Photography | <strong>Needs:</strong> Web Design</p>
-                </div>
-                <button class="btn btn-primary match-button" data-match-id="alex" onclick="startExchange('alex')">Connect & Exchange</button>
-            </div>
-
-            <div class="match-card" data-user="maria">
-                <img src="placeholder-user.svg" alt="User Profile">
-                <div class="match-info">
-                    <h3>Maria Lopez</h3>
-                    <p><strong>Offers:</strong> Financial Advice | <strong>Needs:</strong> Guitar Lessons</p>
-                </div>
-                <button class="btn btn-primary match-button" data-match-id="maria" onclick="startExchange('maria')">Connect & Exchange</button>
-            </div>
-
-            <button class="btn btn-secondary" onclick="showSection('hero-section')">Back to Home</button>
-        </section>
-
-        <section id="chat-section" class="hidden">
-            <h2 id="chat-header">Exchange with [User Name]</h2>
-            <div class="chat-box">
-                <div id="ai-reply" class="chat-message ai-message">
-                    <p>👋 **Aura AI:** Welcome to your Skill Exchange! I'm here to guide your first lesson. Since you matched on **Web Design** and **Photography**, how should you start the exchange?</p>
-                </div>
-
-                <div class="chat-message user-message">
-                    <p>I can send Alex a link to a portfolio of my work to show him my design style.</p>
-                </div>
-                
-                <div class="chat-message ai-message">
-                    <p>👍 **Aura AI:** Excellent! Sending a portfolio link is a great first step. I will log **1 Skill Minute** for that proactive action!</p>
-                </div>
-            </div>
-            
-            <button class="btn btn-primary" onclick="showSection('match-section')">View Other Matches</button>
-        </section>
-        
+      <!-- Footer / Instagram -->
+      <footer class="site-footer">
+        <div class="footer-left">
+          <p>© <span id="thisYear"></span> Time Bank Project</p>
+        </div>
+        <div class="footer-right">
+          <a id="igLink" class="ig" href="https://instagram.com/iganga360" target="_blank" rel="noopener">
+            <span class="ig-anim">Follow @iganga360</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"/></svg>
+          </a>
+        </div>
+      </footer>
     </main>
 
-    <footer>
-        <p>&copy; 2024 SkillSwap Community. All rights reserved.</p>
-        <div class="creator-profile" id="creator-profile">
-            <a href="https://instagram.com/iganga360" target="_blank" class="instagram-link">
-                Creator: @iganga360
-            </a>
-        </div>
-    </footer>
+    <!-- Modals: Login/Signup & Profile & Chat -->
+    <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"></div>
 
-    <script src="script.js"></script>
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal" aria-hidden="true" role="dialog" aria-modal="true">
+      <button class="modal-close" id="closeAuth">✕</button>
+      <div class="modal-body">
+        <div class="auth-tabs">
+          <button class="tab active" data-tab="login">Login</button>
+          <button class="tab" data-tab="signup">Signup</button>
+        </div>
+
+        <div id="tabLogin" class="tab-panel">
+          <h4>Welcome back</h4>
+          <input id="loginIdentifier" placeholder="Email or username" />
+          <input id="loginPassword" placeholder="Password" type="password" />
+          <button id="btnDoLogin" class="btn primary">Login</button>
+          <p class="muted small">No account? <a href="#" id="swapToSignup">Create one</a></p>
+        </div>
+
+        <div id="tabSignup" class="tab-panel hidden">
+          <h4>Create your profile</h4>
+          <div class="file-row">
+            <label class="filebox">
+              <input id="signupAvatar" type="file" accept="image/*" />
+              <span>Upload Photo</span>
+            </label>
+            <div class="avatar-preview" id="avatarPreview"></div>
+          </div>
+
+          <input id="signupName" placeholder="Full name" />
+          <input id="signupUsername" placeholder="Username (unique)" />
+          <input id="signupEmail" placeholder="Email" />
+          <input id="signupMobile" placeholder="Mobile number" />
+          <input id="signupPassword" placeholder="Choose a password" type="password" />
+          <input id="signupWantToLearn" placeholder="I want to learn (comma separated)" />
+          <input id="signupCanTeach" placeholder="I can teach (comma separated)" />
+          <textarea id="signupOther" placeholder="Other requirements or notes (optional)"></textarea>
+          <button id="btnDoSignup" class="btn primary">Create Profile</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile Modal (view/edit) -->
+    <div class="modal" id="profileModal" aria-hidden="true">
+      <button class="modal-close" id="closeProfile">✕</button>
+      <div class="modal-body">
+        <h3>Your Profile</h3>
+        <div id="profileCard" class="profile-card"></div>
+        <button id="btnEditProfile" class="btn">Edit</button>
+        <button id="btnLogout" class="btn ghost">Logout</button>
+      </div>
+    </div>
+
+    <!-- Chat / Connection Modal -->
+    <div class="modal" id="chatModal" aria-hidden="true">
+      <button class="modal-close" id="closeChat">✕</button>
+      <div class="modal-body">
+        <h3 id="chatWith">Connect</h3>
+        <div id="chatBox" class="chat-box">
+          <div class="muted small">This is a demo chat — real messaging needs a backend.</div>
+        </div>
+        <input id="chatInput" placeholder="Send a message (demo)" />
+        <button id="sendChat" class="btn primary">Send</button>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

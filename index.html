@@ -1,195 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Time Bank • Skill Exchange</title>
-  <meta name="description" content="Time Bank — Exchange Skills, Not Money. A community skill exchange platform (MVP)." />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Bank: Exchange Skills</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="app" class="light">
-    <header class="site-header">
-      <div class="brand">
-        <!-- SVG Logo -->
-        <div class="logo" aria-hidden="true">
-          <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" role="img">
-            <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ff8a65"/><stop offset="1" stop-color="#7c4dff"/></linearGradient></defs>
-            <rect rx="8" width="120" height="40" fill="url(#g)"/>
-            <text x="16" y="26" font-family="Segoe UI, Roboto, Arial" font-size="14" fill="#fff">Time</text>
-            <text x="58" y="26" font-family="Segoe UI, Roboto, Arial" font-size="14" fill="#fff">Bank</text>
-            <circle cx="12" cy="20" r="5" fill="#fff" opacity="0.12"/>
-          </svg>
-        </div>
-        <div class="brand-text">
-          <h1>Time Bank</h1>
-          <p class="tag">Exchange Skills — 1 hour = 1 Time Credit</p>
-        </div>
-      </div>
 
-      <nav class="header-controls">
-        <button id="themeToggle" class="btn ghost" title="Toggle dark / light">🌗</button>
-        <button id="btnLogin" class="btn primary">Login / Signup</button>
-      </nav>
+    <header class="hero">
+        [span_0](start_span)<h1>Time Bank: A World Where Time is Currency[span_0](end_span)</h1>
+        [span_1](start_span)<p>Exchange **skills instead of money**[span_1](end_span).</p>
+        <a href="#how-it-works" class="cta-button">See How It Works</a>
     </header>
 
-    <main>
-      <!-- Hero -->
-      <section class="hero">
-        <div class="hero-content">
-          <h2>Exchange Skills, Not Money</h2>
-          <p class="lead">A community skill-exchange platform where 1 hour = 1 credit. Learn, teach, and build stronger neighbourhoods.</p>
-          <div class="hero-ctas">
-            <button id="ctaSignup" class="btn cta">Create Profile</button>
-            <button id="ctaExplore" class="btn ghost">Explore Members</button>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <!-- stylized cards -->
-          <div class="cards">
-            <div class="card card-1">
-              <h3>Teach Guitar 🎸</h3>
-              <p>30 mins lesson — 0 cost</p>
+    <section id="problem" class="container">
+        <h2>The Challenge</h2>
+        <div class="problem-points">
+            <div class="point">
+                <h3>Rising Unemployment</h3>
+                [span_2](start_span)<p>Many people lack work opportunities[span_2](end_span).</p>
             </div>
-            <div class="card card-2">
-              <h3>Learn Excel 📊</h3>
-              <p>1 hour hands-on</p>
+            <div class="point">
+                <h3>Untapped Skills Wasted</h3>
+                [span_3](start_span)<p>Valuable talents remain unused[span_3](end_span).</p>
             </div>
-            <div class="card card-3">
-              <h3>Repair Bike 🔧</h3>
-              <p>Community workshop</p>
             </div>
-          </div>
-        </div>
-      </section>
+    </section>
 
-      <!-- Features -->
-      <section class="features">
-        <h3>Why Time Bank?</h3>
-        <div class="feature-grid">
-          <div class="feature">
-            <h4>Inclusivity</h4>
-            <p>Remove financial barriers — exchange skills and time.</p>
-          </div>
-          <div class="feature">
-            <h4>Equal Value</h4>
-            <p>1 hour of any service = 1 Time Credit — fair and transparent.</p>
-          </div>
-          <div class="feature">
-            <h4>Community</h4>
-            <p>Strengthen local relationships and reduce isolation.</p>
-          </div>
-          <div class="feature">
-            <h4>Skill Utilization</h4>
-            <p>Tap into skills that are otherwise unused.</p>
-          </div>
-        </div>
-      </section>
+    <section id="solution" class="container bg-light">
+        <h2>The Solution: Time Bank</h2>
+        [span_4](start_span)<p class="tagline">1 hour of service = 1 credit (equal for all)[span_4](end_span)</p>
 
-      <!-- Members / Explore -->
-      <section class="members" id="membersSection">
-        <div class="section-head">
-          <h3>Explore Members</h3>
-          <p class="muted">Find people who can teach what you want to learn — and who want to learn what you know.</p>
+        <div id="how-it-works" class="flow-chart">
+            <div class="step">1. [span_5](start_span)Sign Up → **Join Community**[span_5](end_span)</div>
+            <div class="arrow">→</div>
+            <div class="step">2. [span_6](start_span)List Skills You **Offer & Need**[span_6](end_span)</div>
+            <div class="arrow">→</div>
+            <div class="step">3. [span_7](start_span)Get Matched → **Exchange Services**[span_7](end_span)</div>
+            <div class="arrow">→</div>
+            <div class="step">4. [span_8](start_span)Earn Credits → **Use Them Later**[span_8](end_span)</div>
         </div>
 
-        <div id="memberControls" class="member-controls">
-          <input id="searchSkill" placeholder="Search skill (e.g., 'guitar')" />
-          <select id="filterMode">
-            <option value="all">All Members</option>
-            <option value="mutual">Mutual Matches</option>
-          </select>
-          <button id="btnRefresh" class="btn">Refresh</button>
+        [span_9](start_span)<p class="motto">Skills for All[span_9](end_span)</p>
+    </section>
+
+    <section id="impact" class="container">
+        <h2>Our Vision and Impact</h2>
+        [span_10](start_span)<p class="vision-statement">"Imagine a world where **every hour has equal worth**[span_10](end_span)."</p>
+        <div class="metrics">
+            <div class="metric">
+                <span class="value">40%</span>
+                [span_11](start_span)<p>reduction in income inequality[span_11](end_span)</p>
+            </div>
+            <div class="metric">
+                <span class="value">3x</span>
+                [span_12](start_span)<p>stronger community connections[span_12](end_span)</p>
+            </div>
         </div>
+    </section>
+    
+    <footer>
+        [span_13](start_span)<p>**Next Step:** Launch local pilot → Scale across communities[span_13](end_span)</p>
+        [span_14](start_span)<p>Share your time, grow your community[span_14](end_span).</p>
+    </footer>
 
-        <div id="memberList" class="member-list"></div>
-      </section>
-
-      <!-- Footer / Instagram -->
-      <footer class="site-footer">
-        <div class="footer-left">
-          <p>© <span id="thisYear"></span> Time Bank Project</p>
-        </div>
-        <div class="footer-right">
-          <a id="igLink" class="ig" href="https://instagram.com/iganga360" target="_blank" rel="noopener">
-            <span class="ig-anim">Follow @iganga360</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"/></svg>
-          </a>
-        </div>
-      </footer>
-    </main>
-
-    <!-- Modals: Login/Signup & Profile & Chat -->
-    <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"></div>
-
-    <!-- Auth Modal -->
-    <div class="modal" id="authModal" aria-hidden="true" role="dialog" aria-modal="true">
-      <button class="modal-close" id="closeAuth">✕</button>
-      <div class="modal-body">
-        <div class="auth-tabs">
-          <button class="tab active" data-tab="login">Login</button>
-          <button class="tab" data-tab="signup">Signup</button>
-        </div>
-
-        <div id="tabLogin" class="tab-panel">
-          <h4>Welcome back</h4>
-          <input id="loginIdentifier" placeholder="Email or username" />
-          <input id="loginPassword" placeholder="Password" type="password" />
-          <button id="btnDoLogin" class="btn primary">Login</button>
-          <p class="muted small">No account? <a href="#" id="swapToSignup">Create one</a></p>
-        </div>
-
-        <div id="tabSignup" class="tab-panel hidden">
-          <h4>Create your profile</h4>
-          <div class="file-row">
-            <label class="filebox">
-              <input id="signupAvatar" type="file" accept="image/*" />
-              <span>Upload Photo</span>
-            </label>
-            <div class="avatar-preview" id="avatarPreview"></div>
-          </div>
-
-          <input id="signupName" placeholder="Full name" />
-          <input id="signupUsername" placeholder="Username (unique)" />
-          <input id="signupEmail" placeholder="Email" />
-          <input id="signupMobile" placeholder="Mobile number" />
-          <input id="signupPassword" placeholder="Choose a password" type="password" />
-          <input id="signupWantToLearn" placeholder="I want to learn (comma separated)" />
-          <input id="signupCanTeach" placeholder="I can teach (comma separated)" />
-          <textarea id="signupOther" placeholder="Other requirements or notes (optional)"></textarea>
-          <button id="btnDoSignup" class="btn primary">Create Profile</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Profile Modal (view/edit) -->
-    <div class="modal" id="profileModal" aria-hidden="true">
-      <button class="modal-close" id="closeProfile">✕</button>
-      <div class="modal-body">
-        <h3>Your Profile</h3>
-        <div id="profileCard" class="profile-card"></div>
-        <button id="btnEditProfile" class="btn">Edit</button>
-        <button id="btnLogout" class="btn ghost">Logout</button>
-      </div>
-    </div>
-
-    <!-- Chat / Connection Modal -->
-    <div class="modal" id="chatModal" aria-hidden="true">
-      <button class="modal-close" id="closeChat">✕</button>
-      <div class="modal-body">
-        <h3 id="chatWith">Connect</h3>
-        <div id="chatBox" class="chat-box">
-          <div class="muted small">This is a demo chat — real messaging needs a backend.</div>
-        </div>
-        <input id="chatInput" placeholder="Send a message (demo)" />
-        <button id="sendChat" class="btn primary">Send</button>
-      </div>
-    </div>
-
-    <!-- Toast -->
-    <div id="toast" class="toast hidden"></div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
